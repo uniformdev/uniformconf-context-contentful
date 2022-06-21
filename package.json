@@ -35,6 +35,8 @@
     "@uniformdev/context-devtools": "^16.1.0",
     "@uniformdev/context-next": "^16.1.0",
     "@uniformdev/context-react": "^16.1.0",
+    "@uniformdev/context-edge": "^16.1.0",
+    "@uniformdev/context-edge-vercel": "^16.1.0",
     "classnames": "2.3.1",
     "contentful": "9.1.32",
     "cookie": "0.5.0",
