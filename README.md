@@ -1,6 +1,6 @@
 # Uniform Context Contentful starter kit
 
-This is Starter kit with a [Next.js](https://nextjs.org/) app enabled with [Uniform Context](https://docs.uniform.app/context/) and [Contenful](https://www.contentful.com/). This starter requires the [Uniform Context app](https://www.contentful.com/marketplace/app/uniform-optimize-for-contentful/) to be installed in your Contentful space..
+This is Starter kit with a [Next.js](https://nextjs.org/) app enabled with [Uniform Context](https://docs.uniform.app/context/) and [Contenful](https://www.contentful.com/). This starter requires the [Uniform Context app](https://www.contentful.com/marketplace/app/uniform-optimize-for-contentful/) to be installed in your Contentful space.
 
 ## Getting Started
 
