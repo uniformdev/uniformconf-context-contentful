@@ -1,14 +1,16 @@
-import { ComponentType } from 'react';
-import { Entry } from 'contentful';
-import { DefaultNotImplementedComponent } from './DefaultNotImplementedComponent';
-import { Hero } from './Hero';
-import { TalkList } from './TalkList';
-import { WhyAttendTestPhotoLocation } from './WhyAttend';
-import { Talk } from './Talk';
-import { RegisterForm } from './RegisterForm';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import { PersonalizedHeroList } from './PersonalizedHeroList';
+import { ComponentType } from "react";
+import { Entry } from "contentful";
+import { DefaultNotImplementedComponent } from "./DefaultNotImplementedComponent";
+import { Hero } from "./Hero";
+import { TalkList } from "./TalkList";
+import { WhyAttendTestPhotoLocation } from "./WhyAttend";
+import { Talk } from "./Talk";
+import { RegisterForm } from "./RegisterForm";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import { PersonalizedHeroList } from "./PersonalizedHeroList";
+import { CDPLoader } from "./CDPLoader";
+
 import type {
   IHero,
   I3ZPkEj1KqeSn4QdsdnNko3,
@@ -19,7 +21,7 @@ import type {
   ITalk,
   ITalksList,
   IWhyAttend,
-} from '../@types/generated/contentful';
+} from "../@types/generated/contentful";
 
 // @todo fix usage of union type.
 export type EntryUnionType =
@@ -45,11 +47,14 @@ const mappings: ComponentMapping = {
   registrationForm: RegisterForm,
   header: Navbar,
   footer: Footer,
-  '3zPkEj1KqeSn4QdsdnNKO3': PersonalizedHeroList,
+  "3zPkEj1KqeSn4QdsdnNKO3": PersonalizedHeroList,
+  cdp_profile_loader: CDPLoader,
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function resolveRenderer(contentfulEntry: Entry<any>): ComponentType<Entry<any>> {
+export function resolveRenderer(
+  contentfulEntry: Entry<any>
+): ComponentType<Entry<any>> {
   const componentImpl = mappings[contentfulEntry.sys.contentType.sys.id];
   return componentImpl ?? DefaultNotImplementedComponent;
 }
