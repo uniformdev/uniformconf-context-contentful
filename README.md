@@ -4,7 +4,7 @@ This is Starter kit with a [Next.js](https://nextjs.org/) app enabled with [Unif
 
 ## Getting Started
 
-First, you need provide API keys to connect with empty Uniform App project and empty space in Contentful:
+First, you must provide API keys to connect with empty Uniform App project and empty space in Contentful:
 
 1. Copy `.env.example` into `.env` and fill all the keys
 
