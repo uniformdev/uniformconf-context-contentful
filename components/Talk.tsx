@@ -9,12 +9,15 @@ export const Talk = (props: any) => {
   const { variation } = personalizationResult || {};
   const { fields } = variation || {};
   const { title, description, audience } = fields || {};
+
+  const forEveryone = audience && audience.length > 1;
+
   return (
     <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
       <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow space-y-2 pt-2">
         <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden">
           <div className="mt-3 mb-3 flex items-center justify-start">
-            <AudienceLabel audienceName={audience?.[0] ?? 'Everyone'} />
+            { forEveryone ? <AudienceLabel audienceName='Everyone' /> : <AudienceLabel audienceName={audience?.[0] ?? 'Everyone'} /> }
           </div>
         </div>
         <a href="#" className="flex flex-wrap no-underline hover:no-underline">

@@ -77,6 +77,7 @@ const ImageRightCallout = ({ description, image, variant }: CalloutProps) => {
         {image?.fields?.file?.url ? (
           <Image
             src={`https:${image?.fields?.file?.url}`}
+            alt=""
             layout="responsive"
             loading="lazy"
             className="w-full sm:h-64 mx-auto"
@@ -103,6 +104,7 @@ const ImageLeftCallout = ({ description, image, variant }: CalloutProps) => {
         {image?.fields?.file?.url ? (
           <Image
             src={`https:${image?.fields?.file?.url}`}
+            alt=""
             layout="responsive"
             loading="lazy"
             className="w-5/6 sm:h-64 mx-auto"
